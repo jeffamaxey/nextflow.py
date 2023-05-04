@@ -31,32 +31,32 @@ class Execution:
     def datetime(self):
         """The datetime at which the execution started."""
 
-        data = self.history_data
-        if data: return data[0]
+        if data := self.history_data:
+            return data[0]
     
 
     @property
     def duration(self):
         """How long the execution took to complete."""
 
-        data = self.history_data
-        if data: return data[1]
+        if data := self.history_data:
+            return data[1]
     
 
     @property
     def status(self):
         """The Nextflow reported status of the execution."""
 
-        data = self.history_data
-        if data: return data[3]
+        if data := self.history_data:
+            return data[3]
     
 
     @property
     def command(self):
         """The command used at the terminal to run the pipeline."""
 
-        data = self.history_data
-        if data: return data[6]
+        if data := self.history_data:
+            return data[6]
     
 
     @property
